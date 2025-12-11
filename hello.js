@@ -1,8 +1,4 @@
-const num_1 = 5;
-const num_2 = 3;
-sum = num_1 + num_2;
-
-let difference = (num_1 - num_2);
-
-console.log(sum);
-console.log(difference);
+function greet (name) {
+    console.log(`Hello, ${name}!`);
+}
+greet("Hikaru");
