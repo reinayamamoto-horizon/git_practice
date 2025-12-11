@@ -13,3 +13,14 @@ function checkTemperature(t){
 checkTemperature(30);
 checkTemperature(20);
 checkTemperature(1);
+
+
+//２.
+function checkOddEven(n){
+    if (n % 2 === 0){
+        console.log("Even");
+    }else{
+        console.log("Odd");
+    }
+}
+checkOddEven(2);
