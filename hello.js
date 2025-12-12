@@ -1,33 +1,46 @@
 //1
-function hasOdd(numbers){
-    for (let i = 0; i < numbers.length; i++){
-        if(numbers[i] % 2 !== 0){
-            return console.log(true);
-        }
-    }
-    return console.log(false);
+function printBooks(books){
+    books.forEach ( books => {
+        console.log(`『${books.name}』『${books.author}』`)
+    })
 }
 
-hasOdd([1, 2, 3, 4, 5])
+books = [
+    { name: 'JavaScript入門', author: '山田太郎' },
+    { name: 'JavaScriptの絵本', author: '山田次郎' }
+]
+printBooks(books)
+
 
 //2
-function Odd(numbers){
-    for (let i = 0; i < numbers.length; i++){
-        if(numbers[i] % 2 !== 0){
-            console.log(numbers[i])
-        }
-    }
-}
+let users = [
+    {
+      username: '山田',
+      permissions: {
+        canRead: true,
+        canWrite: true,
+        canDelete: false
+      }
+    },
+    {
+      username: '佐藤',
+      permissions: {
+        canRead: false,
+        canWrite: true,
+        canDelete: false
+      }
+    },
+    // ユーザーを追加してください
+  ];
+  function checkPermission(username, permission) {
+    const user = users.find(u => u.username === username )
+      if(!user) return false;
+    return Boolean (user.permissions[permission])
+    // 関数を完成させてください
+  }
 
-Odd([1,2,3,4,5])
+console.log(checkPermission('山田', 'canWrite'));  // true
+console.log(checkPermission('山田', 'canDelete')); // false
+console.log(checkPermission('佐藤', 'canRead'));   // false
 
-//3
-function square(numbers){
-    const num = [];
-    for (let i = 0; i < numbers.length; i++){
-        num.push(numbers[i] ** 2);
-    }
-    return num;
-}
 
-console.log(square([1, 2, 3, 4, 5]))
