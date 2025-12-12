@@ -1,26 +1,33 @@
-//１.温度チェッカー
-function checkTemperature(t){
-    if (t >= 30){
-        console.log("Hot");
-    }else if(15 <= t && t < 30){
-        console.log("Warm");
-    }else{
+//1
+function hasOdd(numbers){
+    for (let i = 0; i < numbers.length; i++){
+        if(numbers[i] % 2 !== 0){
+            return console.log(true);
+        }
+    }
+    return console.log(false);
+}
 
-        console.log("Cold");
+hasOdd([1, 2, 3, 4, 5])
+
+//2
+function Odd(numbers){
+    for (let i = 0; i < numbers.length; i++){
+        if(numbers[i] % 2 !== 0){
+            console.log(numbers[i])
+        }
     }
 }
 
-checkTemperature(30);
-checkTemperature(20);
-checkTemperature(1);
+Odd([1,2,3,4,5])
 
-
-//２.
-function checkOddEven(n){
-    if (n % 2 === 0){
-        console.log("Even");
-    }else{
-        console.log("Odd");
+//3
+function square(numbers){
+    const num = [];
+    for (let i = 0; i < numbers.length; i++){
+        num.push(numbers[i] ** 2);
     }
+    return num;
 }
-checkOddEven(2);
+
+console.log(square([1, 2, 3, 4, 5]))
